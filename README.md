@@ -2,7 +2,7 @@
 
 <div align="center">
 
-### Explainable HER2 Decision Support With Clinician-Reviewed LLM Guidance
+### HEALTHCARE SYSTEM FOR BREAST CANCER DIAGNOSIS WITH EXPLAINABLE AI AND PERSONALISED LLM RECOMMENDATIONS 
 
 [![Final Year Project](https://img.shields.io/badge/Final_Year_Project-Jan_2026-0f172a?style=for-the-badge)](#)
 [![AI](https://img.shields.io/badge/AI-HER2_Classification-2563eb?style=for-the-badge)](#)
