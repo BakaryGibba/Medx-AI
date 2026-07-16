@@ -1,0 +1,12 @@
+erDiagram
+  USER ||--o{ PATIENT : manages
+  USER ||--o{ CASE : creates
+  PATIENT ||--o{ CASE : has
+  CASE ||--o{ DOCUMENT : contains
+  CASE ||--o{ HER2_PREDICTION : produces
+  DOCUMENT ||--o{ HER2_PREDICTION : source_for
+  HER2_PREDICTION ||--o{ RECOMMENDATION : grounds
+  USER ||--o{ RECOMMENDATION : reviews
+  USER ||--o{ ACTIVITY : performs
+  USER ||--o{ NOTIFICATION : receives
+  AI_MODEL ||--o{ HER2_PREDICTION : versions

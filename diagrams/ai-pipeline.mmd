@@ -1,0 +1,14 @@
+flowchart TD
+  A[Whole-slide images] --> B[ROI and patch extraction]
+  B --> C[Tissue filtering]
+  C --> D[Normalization and augmentation]
+  D --> E[Color and texture features]
+  E --> F[Standardization and balancing]
+  F --> RF[Random Forest]
+  F --> LR[Logistic Regression]
+  F --> SVM[Support Vector Machine]
+  RF & LR & SVM --> V[Soft-voted probabilities]
+  V --> U{High uncertainty?}
+  U -->|Yes| R[Unknown or manual review]
+  U -->|No| P[HER2 class and confidence]
+  P --> X[Grad-CAM explanation]

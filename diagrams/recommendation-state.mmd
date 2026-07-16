@@ -1,0 +1,10 @@
+stateDiagram-v2
+  [*] --> NotGenerated
+  NotGenerated --> Draft: generate
+  Draft --> PendingReview: validate
+  PendingReview --> Saved: clinician accepts
+  PendingReview --> Discarded: clinician rejects
+  PendingReview --> Draft: regenerate
+  Saved --> Reported: include approved output
+  Discarded --> [*]
+  Reported --> [*]

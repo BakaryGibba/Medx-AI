@@ -1,0 +1,40 @@
+# Private research material
+*.pdf
+*.doc
+*.docx
+report/
+reports/
+thesis/
+
+# Data and model artifacts
+data/
+dataset/
+datasets/
+models/
+weights/
+checkpoints/
+*.pt
+*.pth
+*.pkl
+*.joblib
+*.onnx
+*.csv
+*.parquet
+
+# Secrets and runtime material
+.env
+.env.*
+!.env.example
+credentials/
+secrets/
+uploads/
+media/
+node_modules/
+__pycache__/
+*.log
+
+# Local tooling
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

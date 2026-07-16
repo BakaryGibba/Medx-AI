@@ -1,0 +1,14 @@
+flowchart LR
+  A[Register patient] --> B[Create case]
+  B --> C[Upload histopathology image]
+  C --> D{Input eligible?}
+  D -->|No| E[Reject or request review]
+  D -->|Yes| F[Run HER2 prediction]
+  F --> G[Compute confidence and uncertainty]
+  F --> H[Generate Grad-CAM]
+  G & H --> I[Doctor reviews evidence]
+  I --> J[Add notes or history]
+  J --> K[Generate LLM draft]
+  K --> L{Clinician decision}
+  L -->|Accept| M[Save and report]
+  L -->|Reject| N[Discard or investigate]

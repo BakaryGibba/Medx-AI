@@ -1,0 +1,14 @@
+flowchart TD
+  A[Prediction and uncertainty] --> P[Structured prompt]
+  B[Clinical notes] --> P
+  C[History documents] --> D[Parse or OCR]
+  D --> P
+  P --> E[Primary LLM]
+  E -->|Unavailable| F[Fallback LLM]
+  E --> G[Validate structured output]
+  F --> G
+  G -->|Valid| H[Pending review]
+  G -->|Malformed| I[Conservative fallback]
+  I --> H
+  H -->|Accept| J[Saved recommendation]
+  H -->|Reject| K[Discarded or regenerated]

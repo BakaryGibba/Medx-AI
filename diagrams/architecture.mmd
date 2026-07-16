@@ -1,0 +1,31 @@
+flowchart TB
+  subgraph Users[Clinical users]
+    A[Administrator]
+    N[Nurse]
+    D[Doctor]
+  end
+  subgraph Client[Presentation layer]
+    UI[React and TypeScript dashboard]
+  end
+  subgraph API[Application layer]
+    DRF[Django REST API]
+    AUTH[JWT and RBAC]
+    CASE[Patients, cases and documents]
+    AUDIT[Activities and notifications]
+  end
+  subgraph Intelligence[AI services]
+    ML[HER2 ensemble]
+    XAI[Grad-CAM and uncertainty]
+    OCR[Document parsing and OCR]
+    LLM[LLM recommendation service]
+  end
+  DB[(Relational database)]
+  OBJ[(MinIO object storage)]
+  A & N & D --> UI
+  UI --> DRF
+  DRF --> AUTH & CASE & AUDIT
+  CASE --> ML --> XAI
+  CASE --> OCR --> LLM
+  XAI --> LLM
+  DRF --> DB
+  CASE --> OBJ

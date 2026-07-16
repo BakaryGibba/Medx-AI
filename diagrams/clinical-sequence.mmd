@@ -1,0 +1,18 @@
+sequenceDiagram
+  actor Nurse
+  actor Doctor
+  participant App as Medx AI
+  participant Model as HER2 and XAI
+  participant LLM as Recommendation service
+  Nurse->>App: Register patient
+  Doctor->>App: Create case and upload image
+  App->>App: Validate image
+  App->>Model: Run prediction and explanation
+  Model-->>App: Class, probabilities, uncertainty, heatmap
+  App-->>Doctor: Present contestable evidence
+  Doctor->>App: Add context and request draft
+  App->>LLM: Generate structured recommendation
+  LLM-->>App: Reviewable draft
+  App-->>Doctor: Pending review
+  Doctor->>App: Accept or reject
+  App-->>Doctor: Traceable final report

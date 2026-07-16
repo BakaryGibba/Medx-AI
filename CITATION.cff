@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you reference this academic case study, please cite the project team."
+title: "Medx AI: Explainable HER2 Decision Support With Personalised LLM Recommendations"
+type: software
+authors:
+  - family-names: Gibba
+    given-names: Bakary
+  - family-names: Islam
+    given-names: Md Rashidul
+  - family-names: Khrisan
+    given-names: Faisal Rafat Faisal
+repository-code: "https://github.com/BakaryGibba/Medx-AI"
+date-released: 2026-01-01
+keywords:
+  - explainable artificial intelligence
+  - HER2 classification
+  - clinical decision support
+  - histopathology
+  - large language models
+  - human-in-the-loop AI
+abstract: >-
+  Academic case study of a clinician-supervised healthcare prototype combining
+  four-class HER2 prediction, uncertainty handling, Grad-CAM explanations,
+  structured LLM recommendation drafts, and role-based clinical workflows.
