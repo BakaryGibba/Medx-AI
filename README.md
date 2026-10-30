@@ -26,7 +26,7 @@ Medx AI explores how an AI-assisted HER2 workflow can move beyond a standalone p
 | Reported model performance | Evaluation scope | Clinical roles | Public repository scope |
 | :---: | :---: | :---: | :---: |
 | ~96% weighted accuracy | 154 tests passed | Doctor · Nurse · Admin | Case study only |
-| 4 HER2 classes | 4.5/5 average UAT | Separated responsibilities | No source or dataset |
+| 4 HER2 classes | 4.5/5 simulated UAT | Separated responsibilities | No source or dataset |
 
 ## Why It Matters
 
